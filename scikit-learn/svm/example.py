@@ -1,2 +1,9 @@
+from sklearn import datasets
 from sklearn import svm
-clf = svm.SVC(gamma=0.001, C=100.)
+
+clf = svm.SVC()
+iris = datasets.load_iris()
+X, y = iris.data, iris.target
+print clf.fit(X, y)  
+
+
